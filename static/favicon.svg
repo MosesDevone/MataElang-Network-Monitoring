@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background shape to ensure visibility on light/dark tabs -->
+    <path d="M50 5 L93.3 30 V80 L50 105 L6.7 80 V30 L50 5Z" fill="#0f172a" />
+    
+    <!-- Pulse Effect -->
+    <circle cx="50" cy="50" r="40" fill="#3B82F6" opacity="0.2">
+        <animate attributeName="r" values="30;45;30" dur="2s" repeatCount="indefinite" />
+        <animate attributeName="opacity" values="0.3;0;0.3" dur="2s" repeatCount="indefinite" />
+    </circle>
+
+    <!-- Eagle Eye -->
+    <path 
+    d="M20 50 C20 50 35 35 50 35 C65 35 80 50 80 50 C80 50 65 65 50 65 C35 65 20 50 20 50 Z" 
+    stroke="#F59E0B" 
+    stroke-width="4"
+    fill="none"
+    />
+    
+    <!-- Iris -->
+    <circle cx="50" cy="50" r="10" fill="#3B82F6" />
+    <circle cx="50" cy="50" r="5" fill="#000" />
+    
+    <!-- Circuit lines -->
+    <path d="M50 15 L50 35" stroke="#3B82F6" stroke-width="2" />
+    <path d="M50 85 L50 65" stroke="#3B82F6" stroke-width="2" />
+    <path d="M15 50 L35 50" stroke="#3B82F6" stroke-width="2" />
+    <path d="M65 50 L85 50" stroke="#3B82F6" stroke-width="2" />
+    
+    <circle cx="50" cy="15" r="3" fill="#F59E0B" />
+</svg>
