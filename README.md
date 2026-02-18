@@ -54,45 +54,45 @@ This distribution uses **Cython-compiled binaries (`.pyd`)**.
 *   **Multi-Protocol Surveillance**:
     *   **HTTP/HTTPS**: Monitor availability, response time, and status codes.
     *   **ICMP (Ping)**: High-precision latency and packet loss tracking.
-    *   **SSL/TLS Guardian**: Monitoring validitas sertifikat SSL dan peringatan otomatis sebelum masa berlaku habis.
-    *   **TCP Port Scanner**: Memantau port spesifik yang terbuka pada server target.
-*   **Massive Concurrency**: Ditenagai oleh Python `asyncio` dan `aiohttp`, mampu menghandle ratusan monitor secara simultan dengan penggunaan resource sistem yang sangat efisien.
-*   **Smart Background Task**: Engine berjalan di background sebagai *lifespan service*, memastikan monitoring tetap aktif selama server menyala.
+    *   **SSL/TLS Guardian**: Monitors SSL certificate validity and sends automated alerts before expiration.
+    *   **TCP Port Scanner**: Monitors specific open ports on the target server.
+*   **Massive Concurrency**: Powered by Python `asyncio` and `aiohttp`, capable of handling hundreds of monitors simultaneously with extremely efficient system resource usage.
+*   **Smart Background Task**: The engine runs as a lifespan background service, ensuring continuous monitoring as long as the server is active.
 
 ### 🛡️ 2. Cyber-Security & Threat Intelligence (The Shield)
-*   **Web Defacement Detection**: Fitur **Content Locking** yang menyimpan hash SHA-256 dari halaman web. Memberi peringatan instan jika konten diubah oleh hacker/defacer.
-*   **Security Baseline Port Locking**: Mengunci daftar port legal. Sistem akan mendeteksi jika ada port baru (backdoor) yang tiba-tiba terbuka.
-*   **DDoS Early Warning System**: Analisis anomali latensi otomatis menggunakan deteksi spike (3x baseline) untuk memperingatkan potensi serangan flooding.
-*   **GHOST Path Detection**: Melindungi server dari eksposur path sensitif atau kerentanan GHOST yang tidak sengaja terbuka ke publik.
-*   **Phishing Intelligence**: Integrasi pengecekan target terhadap database phishing global untuk memastikan domain Anda tidak disalahgunakan.
+*   **Web Defacement Detection**: Advanced **Content Locking** feature that stores SHA-256 hashes of web pages. Sends instant alerts if page content is altered by hackers or defacers.
+*   **Security Baseline Port Locking**: Locks a whitelist of legal ports. The system automatically detects any new, suspicious ports (backdoors) that suddenly open.
+*   **DDoS Early Warning System**: Automated latency anomaly analysis using spike detection (3x baseline) to warn of potential flooding attacks.
+*   **GHOST Path Detection**: Protects servers from sensitive path exposure or GHOST vulnerabilities unintentionally left open to the public.
+*   **Phishing Intelligence**: Integration with global phishing databases to ensure your domain is not being impersonated or misused.
 
 ### 📊 3. Geographical Visualization (The Eye)
-*   **Interactive 3D Global Map**: Visualisasi dashboard menggunakan React-Three-Fiber untuk menampilkan globe 3D interaktif.
-*   **Real-time Traffic Intercept**: Visualisasi arus traffic pengunjung menggunakan sensor satelit simulasi yang bergerak dari lokasi asal (Geo-IP) menuju server target.
-*   **Cyber-HUD Interface**: UI bertema *Cyber-Surveillance* dengan animasi futuristik, memberikan pengalaman operasional NOC (Network Operations Center) kelas atas.
-*   **Geo-IP Automatic Resolution**: Resolusi otomatis lokasi fisik (Latitude, Longitude, Country, City) berdasarkan IP atau Domain target.
+*   **Interactive 3D Global Map**: Stunning 3D dashboard visualization using React-Three-Fiber for an immersive telemetry experience.
+*   **Real-time Traffic Intercept**: Visualizes inbound visitor traffic flows using simulated satellite sensors moving from Geo-IP source to target server.
+*   **Cyber-HUD Interface**: A futuristic cyber-surveillance UI with dynamic animations, providing a premium NOC (Network Operations Center) operational experience.
+*   **Geo-IP Automatic Resolution**: Automatically resolves physical coordinates (Latitude, Longitude, Country, City) for every monitored IP or Domain.
 
 ### 🛠️ 4. Advanced Networking Toolkit (The Tools)
-*   **Geographical Traceroute**: Melacak rute koneksi antar hop router dan memvisualisasikannya di atas peta dunia untuk mengidentifikasi titik kemacetan ISP.
-*   **Enterprise Speedtest**: Integrasi engine *Speedtest-cli* untuk mengukur bandwidth (Download, Upload, Ping) secara real-time dan menyimpan riwayatnya.
-*   **NOC-Style Analytics**: Grafik performa latensi dalam format *High-Resolution* untuk memantau stabilitas jaringan tiap jam.
+*   **Geographical Traceroute**: Tracks hop-by-hop routing paths and visualizes them on a global map to identify ISP bottlenecks.
+*   **Enterprise Speedtest**: Integrated *Speedtest-cli* engine to measure real-time bandwidth (Download, Upload, Ping) with historical logging.
+*   **NOC-Style Analytics**: High-resolution latency performance graphs to monitor network stability over time.
 
 ### 📈 5. Reporting & Analytics (The Brain)
-*   **Automated SLA Reporting**: Pembuatan laporan ketersediaan jaringan (Uptime %) yang dihitung secara akurat dalam rentang waktu harian, mingguan, hingga bulanan.
-*   **PDF Export Engine**: Generate laporan SLA profesional secara instan dengan logo MatEl dalam format PDF menggunakan *ReportLab*.
-*   **Data Portability**: Export riwayat data monitoring ke format **CSV** untuk kebutuhan analisis lebih lanjut menggunakan tools seperti Excel atau Power BI.
-*   **Incident Timeline**: Log kronologis otomatis yang mencatat setiap kejadian downtime, uptime, dan perubahan status sistem secara detail.
+*   **Automated SLA Reporting**: Accurate network availability (Uptime %) calculations across daily, weekly, and monthly ranges.
+*   **PDF Export Engine**: Instantly generates professional SLA reports with MatEl branding in PDF format using *ReportLab*.
+*   **Data Portability**: Export historical monitoring data to **CSV** for further analysis in tools like Excel or Power BI.
+*   **Incident Timeline**: Chronological logs that detail every downtime event, recovery, and system status change.
 
 ### 🔐 6. Enterprise-Grade Security
-*   **JWT Authentication**: Keamanan akses menggunakan *JSON Web Tokens* dengan masa berlaku yang dapat dikonfigurasi.
-*   **Argon2 Password Hashing**: Menggunakan algoritma hashing paling aman di industri saat ini untuk melindungi password user.
-*   **Verified Signup Workflow**: Sistem pendaftaran user dengan verifikasi email otomatis berbasis token UUID universal.
-*   **Email & Telegram Alerting**: Integrasi notifikasi multi-channel yang mengirimkan alert kritis langsung ke saku Anda melalui Telegram Bot atau Email SMTP.
+*   **JWT Authentication**: Secure access control using *JSON Web Tokens* with configurable expiry.
+*   **Argon2 Password Hashing**: Utilizes the industry-standard Argon2 algorithm for maximum password protection.
+*   **Verified Signup Workflow**: Robust registration process featuring automated email verification via universal UUID tokens.
+*   **Email & Telegram Alerting**: Multi-channel notification integration sending critical alerts directly to your Telegram Bot or SMTP Email.
 
 ### 📦 7. Production-Ready Infrastructure
-*   **SQLite with WAL Mode**: Menggunakan mode *Write-Ahead Logging* untuk menjamin stabilitas database saat banyak task monitoring menulis data secara bersamaan.
-*   **Binary Protected Distribution**: Versi release dikompilasi menggunakan **Cython (C-Extensions)**, memberikan proteksi kode sumber dan peningkatan kecepatan eksekusi hingga 30% dibanding Python biasa.
-*   **SPA React Frontend**: Aplikasi frontend yang sudah di-minify dan di-bundle ke dalam folder static, siap di-serve langsung oleh backend tanpa butuh web server tambahan.
+*   **SQLite with WAL Mode**: Uses *Write-Ahead Logging* to ensure database stability during high-concurrency background monitoring tasks.
+*   **Binary Protected Distribution**: Public releases are compiled using **Cython (C-Extensions)**, providing code obfuscation and up to 30% performance improvement over standard Python.
+*   **SPA React Frontend**: Minified and bundled React application served directly by the backend, eliminating the need for an external web server.
 
 ---
 <p align="center">
