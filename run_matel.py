@@ -21,4 +21,11 @@ if __name__ == "__main__":
     print("   MataElang OS [Encrypted Distribution]   ")
     print("   Running in Protected Mode               ")
     print("===========================================")
+    print("Available Routes:")
+    for route in app.routes:
+        if hasattr(route, "path"):
+            print(f" - {route.path}")
+            if route.path == "/api/auth/resend-verification":
+                print("   [!!!] DEBUG: RESEND VERIFICATION ROUTE FOUND!")
+    print("===========================================")
     uvicorn.run(app, host="0.0.0.0", port=8000)
